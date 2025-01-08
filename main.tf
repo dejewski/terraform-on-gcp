@@ -17,7 +17,7 @@ module "staging" {
     network_name = "staging"
 }
 
-module "qa" {
+module "prod" {
     source = "./modules/blog"
 
     project_id = var.project_id
