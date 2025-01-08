@@ -2,11 +2,11 @@ module "app_network" {
   source  = "terraform-google-modules/network/google"
   version = "10.0.0"
   
-  network_name = "app-network"
+  network_name = "${var.network_name}-network"
   project_id = var.project_id
   subnets = [
     {
-      subnet_name         = "app-subnet0"
+      subnet_name         = "${var.network_name}-subnet0"
       subnet_ip           = var.network_ip_range
       subnet_region       = var.region
     }
